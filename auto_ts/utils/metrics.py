@@ -97,4 +97,6 @@ def print_ts_model_stats(actuals: np.array, predicted: np.array, title="Model") 
     print('    Normalized RMSE (MinMax) = %0.0f%%' %(100*rmse/abs(actuals.max()-actuals.min())))
     rmse_asp = (np.sqrt(mean_squared_error(actuals,predicted))/number_as_percentage)*100
     print('    Normalized RMSE (as Std Dev of Actuals)= %0.0f%%' %rmse_asp)
+    plt.savefig("/usr/src/app/src/uploads/"+title+".png")
+
     return rmse, rmse_asp
