@@ -267,7 +267,7 @@ class BuildML(BuildBase):
             ######################################################
             try:
                 _ = plot_importance(model, height=0.9,importance_type='gain', title='%s Feature Importance by Gain' %model_name)
-                _.figure.savefig("feat.png")
+                _.figure.savefig("/usr/src/app/src/uploads/feat.png")
                 if type(y_trues) == dask.dataframe.core.DataFrame or type(y_trues) == dask.dataframe.core.Series:
                     y_trues = y_trues.head(len(y_trues))
 
